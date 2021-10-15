@@ -1,0 +1,33 @@
+May 01, 2021 10:39:57 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1619879757165 hasn't completed by 1619879997166
+	at hudson.remoting.PingThread.ping(PingThread.java:133)
+	at hudson.remoting.PingThread.run(PingThread.java:89)
+
+May 01, 2021 10:44:57 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1619880057165 hasn't completed by 1619880297165
+	at hudson.remoting.PingThread.ping(PingThread.java:133)
+	at hudson.remoting.PingThread.run(PingThread.java:89)
+
+May 01, 2021 10:49:57 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1619880357165 hasn't completed by 1619880597165
+	at hudson.remoting.PingThread.ping(PingThread.java:133)
+	at hudson.remoting.PingThread.run(PingThread.java:89)
+
+May 01, 2021 10:52:19 PM hudson.remoting.SynchronousCommandTransport$ReaderThread run
+INFO: I/O error in channel channel
+java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:77)
+Caused by: java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2799)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3274)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:934)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:396)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:49)
+	at hudson.remoting.Command.readFrom(Command.java:142)
+	at hudson.remoting.Command.readFrom(Command.java:128)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:35)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:63)
+

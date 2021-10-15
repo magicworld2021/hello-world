@@ -1,0 +1,33 @@
+May 01, 2021 9:49:55 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1619876755872 hasn't completed by 1619876995873
+	at hudson.remoting.PingThread.ping(PingThread.java:133)
+	at hudson.remoting.PingThread.run(PingThread.java:89)
+
+May 01, 2021 9:54:55 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1619877055878 hasn't completed by 1619877295879
+	at hudson.remoting.PingThread.ping(PingThread.java:133)
+	at hudson.remoting.PingThread.run(PingThread.java:89)
+
+May 01, 2021 9:59:55 PM hudson.slaves.ChannelPinger$1 onDead
+INFO: Ping failed. Terminating the channel channel.
+java.util.concurrent.TimeoutException: Ping started at 1619877355873 hasn't completed by 1619877595873
+	at hudson.remoting.PingThread.ping(PingThread.java:133)
+	at hudson.remoting.PingThread.run(PingThread.java:89)
+
+May 01, 2021 10:03:10 PM hudson.remoting.SynchronousCommandTransport$ReaderThread run
+INFO: I/O error in channel channel
+java.io.IOException: Unexpected termination of the channel
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:77)
+Caused by: java.io.EOFException
+	at java.io.ObjectInputStream$PeekInputStream.readFully(ObjectInputStream.java:2799)
+	at java.io.ObjectInputStream$BlockDataInputStream.readShort(ObjectInputStream.java:3274)
+	at java.io.ObjectInputStream.readStreamHeader(ObjectInputStream.java:934)
+	at java.io.ObjectInputStream.<init>(ObjectInputStream.java:396)
+	at hudson.remoting.ObjectInputStreamEx.<init>(ObjectInputStreamEx.java:49)
+	at hudson.remoting.Command.readFrom(Command.java:142)
+	at hudson.remoting.Command.readFrom(Command.java:128)
+	at hudson.remoting.AbstractSynchronousByteArrayCommandTransport.read(AbstractSynchronousByteArrayCommandTransport.java:35)
+	at hudson.remoting.SynchronousCommandTransport$ReaderThread.run(SynchronousCommandTransport.java:63)
+
